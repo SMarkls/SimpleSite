@@ -1,0 +1,249 @@
+﻿@using Microsoft.EntityFrameworkCore.Metadata.Internal
+<!DOCTYPE HTML>
+<html lang="ru">
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/css/main.css"/>
+	</head>
+	<body class="homepage is-preload">
+		<div id="page-wrapper">
+
+				<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="~/Home/Index/">Искусство черной магии</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="~/Home/Index/">Home</a></li>
+															
+								<li class="current"><a href="~/Ticket/Index/">Купить билет</a></li>
+								<li ><a href="~/Home/Repertory/">Репертуар</a></li>
+								
+							</ul>
+						</nav>
+
+				</section>					
+
+
+<!-- Main -->
+<section id="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-8 col-12-medium">
+
+			<!-- Отправка заявки на мероприятие -->
+			<article class="box post">
+										
+				<section>								
+					<div >
+						<div class="container" style="overflow: auto;display:block;">
+							<h3 >Регистрация на мероприятие</h3>
+							<div class="row main-row">
+								<div class="col-12 col-12-medium">
+									<form method="post" action="~/Ticket/Registry/">
+										<div>
+											<label >Введите вашу фамилию</label>
+											<input type="text" name="last_name"/>
+										</div>
+										<div>
+											<label >Введите дату рождения</label>
+											<input type="date" name="date"/>
+										</div>
+										<div>
+											<label>Введите номер телефона</label>
+											<input type="text" name="phone"/>
+										</div>
+										<div>
+											<label>Выберите представление</label>
+											<select name="presentation">
+												<option>Языки пламени | Свободно: @ViewBag.Fire</option>
+												<option>Золотая лихорадка | Свободно: @ViewBag.Fever</option>
+												<option>Добро пожаловать на сеанс! | Свободно: @ViewBag.Fire</option>
+											</select>
+										</div>
+										<div>
+											<input type="submit" value="Отправить" />
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+											
+				</section>
+				<section>
+					<header>
+						<h3>Ждем вас. Не пожалеете ...</h3>
+					</header>
+					<p>
+						Тропу колдовства проложили те, для кого неведомое стало понятным.
+					</p>
+				</section>
+			</article>
+			<div>
+				<h3>Отменить регистрацию на мероприятие</h3>
+				<form method="post" action="~/Ticket/Unregistry/">
+                	<div>
+                		<label >Введите вашу фамилию</label>
+                		<input type="text" name="last_name"/>
+                	</div>
+                	<div>
+                		<label >Введите дату рождения</label>
+                		<input type="date" name="date"/>
+                	</div>
+                	<div>
+                		<label>Введите номер телефона</label>
+                		<input type="text" name="phone"/>
+                	</div>
+					<div>
+						<label>Выберите представление</label>
+						<select name="presentation">
+							<option>Языки пламени</option>
+							<option>Золотая лихорадка</option>
+							<option>Добро пожаловать на сеанс!</option>
+						</select>
+					</div>
+					<div>
+						<label>Уникальный ключ</label>
+						<input type="text" name="key"/>
+					</div>
+                	<div>
+                		<input type="submit" value="Отменить" />
+                	</div>
+                </form>
+			</div>
+			</div>
+				<!-- Правый блок (начало)-->
+							<div class="col-4 col-12-medium">
+
+								<!-- Sidebar -->
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
+										<header>
+											<h3> Путь в магию для Вас теперь открыт </h3>
+										</header>
+										<!-- Даты проведения представлений (Начало)-->
+											<ul class="dates">
+										<li>
+											<span class="date">Январь <strong>25</strong></span>
+											<p><a href="#">Языки пламени</a></p>
+											
+										</li>
+										<li>
+											<span class="date">Январь <strong>27</strong></span>
+											<p><a href="#">Золотая лихорадка</a></p>
+																			</li>
+										<li>
+											<span class="date">Январь <strong>28</strong></span>
+											<p><a href="#">Добро пожаловать на сеанс!</a></p>
+											
+										</li>
+										<li>
+											<span class="date">Февраль <strong>03</strong></span>
+											<p><a href="#">Языки пламени</a></p>
+										</li>
+										<li>
+											<span class="date">Февраль <strong>04</strong></span>
+											<p><a href="#">Золотая лихорадка</a></p>
+										</li>
+									</ul>
+									<!-- Даты проведения представлений (Конец)-->
+										<footer>
+											<a href="#" class="button alt">Узнать больше</a>
+										</footer>
+									</section>
+									
+
+							</div>
+			<!-- Правый блок (конец)-->
+		</div>
+	</div>
+</section>
+
+			<!-- Footer -->
+				<section id="footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-8 col-12-medium">
+								<section>
+									<header>
+										<h2>Мы в соцсетях</h2>
+									</header>
+									<section>
+								
+									<ul class="social">
+										<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+										<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+										<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+										<li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
+										<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+									</ul>
+									<ul class="contact">
+										<li>
+											<h3>Address</h3>
+											<p>
+												Untitled Incorporated<br />
+												1234 Somewhere Road Suite<br />
+												Nashville, TN 00000-0000
+											</p>
+										</li>
+										<li>
+											<h3>Mail</h3>
+											<p><a href="#">someone@untitled.tld</a></p>
+										</li>
+										<li>
+											<h3>Phone</h3>
+											<p>(800) 000-0000</p>
+										</li>
+									</ul>
+								</section>
+								</section>
+							</div>
+							<div class="col-4 col-12-medium">
+								<section>
+									<header>
+										<h2>Что вы знаете о нас</h2>
+									</header>
+									<a href="#" class="image featured"><img src="images/pic10.jpg" alt="" /></a>
+									
+									<footer>
+										<ul class="actions">
+											<li><a href="#" class="button">Узнать больше</a></li>
+										</ul>
+									</footer>
+								</section>
+							</div>
+							
+							
+							
+							<div class="col-12">
+
+								<!-- Copyright -->
+									<div id="copyright">
+										<ul class="links">
+											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										</ul>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/jquery.dropotron.min.js"></script>
+			<script src="/js/browser.min.js"></script>
+			<script src="/js/breakpoints.min.js"></script>
+			<script src="/js/util.js"></script>
+			<script src="/js/main.js"></script>
+
+	</body>
+</html>
